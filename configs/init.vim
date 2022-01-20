@@ -9,8 +9,6 @@
 :set hidden
 
 call plug#begin()
-
-
 Plug 'tpope/vim-sensible' " Good Starting Point. load FIRSt
 Plug 'http://github.com/tpope/vim-surround' " Surrounding ysw)
 Plug 'https://github.com/preservim/nerdtree' " NerdTree
@@ -30,7 +28,7 @@ Plug 'ap/vim-css-color' " Show Color of Hex Values as text
 Plug 'kien/rainbow_parentheses.vim' " Rainbow Parentheses for better highlighting
 Plug 'pacha/vem-tabline' " Tabline!
 Plug 'dag/vim-fish' " As I use Fish!
-
+Plug 'fatih/vim-go', { 'do': ':GoUpdateBinaries' } " Go Development
 call plug#end()
 
 set encoding=UTF-8
