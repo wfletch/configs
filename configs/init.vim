@@ -79,3 +79,13 @@ nnoremap <leader>n :NERDTree<CR>
 nnoremap <leader>t :NERDTreeToggle<CR>
 
 set signcolumn=number
+
+
+au BufNewFile,BufRead *.py
+     set tabstop=4
+     set softtabstop=4
+     set shiftwidth=4
+     set textwidth=79
+     set expandtab
+     set autoindent
+     set fileformat=unix
