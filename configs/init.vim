@@ -86,4 +86,3 @@ nnoremap <leader>t :NERDTreeToggle<CR>
 
 set signcolumn=number
 
-
