@@ -23,12 +23,14 @@ Plug 'https://github.com/preservim/tagbar' " Tagbar for code navigation
 Plug 'https://github.com/terryma/vim-multiple-cursors' " CTRL + N for multiple cursors
 Plug 'airblade/vim-gitgutter' " GitGutter Installation
 Plug 'vim-airline/vim-airline-themes' " Vim Airline Themes
-Plug 'valloric/youcompleteme' " Text Completion
+"Plug 'valloric/youcompleteme' " Text Completion
 Plug 'ap/vim-css-color' " Show Color of Hex Values as text
 Plug 'kien/rainbow_parentheses.vim' " Rainbow Parentheses for better highlighting
 Plug 'pacha/vem-tabline' " Tabline!
 Plug 'dag/vim-fish' " As I use Fish!
 Plug 'fatih/vim-go', { 'do': ':GoUpdateBinaries' } " Go Development
+Plug 'dense-analysis/ale'
+Plug 'rust-lang/rust.vim'
 call plug#end()
 
 set encoding=UTF-8
@@ -36,11 +38,15 @@ set encoding=UTF-8
 nnoremap <C-f> :NERDTreeFocus<CR>
 nnoremap <C-n> :NERDTree<CR>
 nnoremap <C-t> :NERDTreeToggle<CR>
-
 nmap <F8> :TagbarToggle<CR>
 
-:set completeopt-=preview " For No Previews
-
+"set completeopt-=preview " For No Previews
+set completeopt=menu,menuone,preview,noselect,noinsert
+let g:ale_completion_enabled = 1
+nnoremap <C-LeftMouse> :ALEGoToDefinition<CR>
+let g:ale_fixers = { 'rust': ['rustfmt', 'trim_whitespace', 'remove_trailing_lines'] }
+" Required, explicitly enable Elixir LS
+let g:ale_linters = {'rust': ['analyzer']}
 
 let g:NERDTreeDirArrowExpandable="+"
 let g:NERDTreeDirArrowCollapsible="~"
@@ -79,13 +85,3 @@ nnoremap <leader>n :NERDTree<CR>
 nnoremap <leader>t :NERDTreeToggle<CR>
 
 set signcolumn=number
-
-
-au BufNewFile,BufRead *.py
-     set tabstop=4
-     set softtabstop=4
-     set shiftwidth=4
-     set textwidth=79
-     set expandtab
-     set autoindent
-     set fileformat=unix
