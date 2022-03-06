@@ -8,6 +8,10 @@
 :set mouse=a
 :set hidden
 
+
+filetype plugin indent on
+autocmd BufNewFile,BufRead *.rs set filetype=rust
+
 call plug#begin()
 Plug 'tpope/vim-sensible' " Good Starting Point. load FIRSt
 Plug 'http://github.com/tpope/vim-surround' " Surrounding ysw)
@@ -31,6 +35,9 @@ Plug 'dag/vim-fish' " As I use Fish!
 Plug 'fatih/vim-go', { 'do': ':GoUpdateBinaries' } " Go Development
 Plug 'dense-analysis/ale'
 Plug 'rust-lang/rust.vim'
+Plug 'kien/ctrlp.vim'
+Plug 'vim-syntastic/syntastic'
+Plug 'nvie/vim-flake8'
 call plug#end()
 
 set encoding=UTF-8
@@ -41,12 +48,12 @@ nnoremap <C-t> :NERDTreeToggle<CR>
 nmap <F8> :TagbarToggle<CR>
 
 "set completeopt-=preview " For No Previews
+" Autocomplete (Rust)
+let g:ale_linters = {'rust': ['analyzer']}
+let g:ale_fixers = { 'rust': ['rustfmt', 'trim_whitespace', 'remove_trailing_lines'] }
 set completeopt=menu,menuone,preview,noselect,noinsert
 let g:ale_completion_enabled = 1
 nnoremap <C-LeftMouse> :ALEGoToDefinition<CR>
-let g:ale_fixers = { 'rust': ['rustfmt', 'trim_whitespace', 'remove_trailing_lines'] }
-" Required, explicitly enable Elixir LS
-let g:ale_linters = {'rust': ['analyzer']}
 
 let g:NERDTreeDirArrowExpandable="+"
 let g:NERDTreeDirArrowCollapsible="~"
@@ -85,3 +92,6 @@ nnoremap <leader>n :NERDTree<CR>
 nnoremap <leader>t :NERDTreeToggle<CR>
 
 set signcolumn=number
+let python_highlight_all=1
+
+
