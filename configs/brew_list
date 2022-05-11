@@ -111,8 +111,6 @@ python@3.9
 readline
 rtmpdump
 ruby
-rust
-rust-analyzer
 sdcv
 six
 spotify-tui
