@@ -1,0 +1,12 @@
+{
+    "security.workspace.trust.untrustedFiles": "open",
+    "editor.fontFamily": "Hack Nerd Font Mono, Monaco, 'Courier New', monospace",
+    "liveServer.settings.donotShowInfoMsg": true,
+    "window.zoomLevel": 1,
+    "workbench.colorTheme": "United Ubuntu",
+    "terminal.integrated.enableMultiLinePasteWarning": false,
+    "go.toolsManagement.autoUpdate": true,
+    "terminal.integrated.env.osx": {
+        "PATH": ""
+}
+}
