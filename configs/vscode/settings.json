@@ -8,6 +8,19 @@
     "go.toolsManagement.autoUpdate": true,
     "terminal.integrated.env.osx": {
         "PATH": ""
-},
-"editor.formatOnSave": true
+    },
+    "editor.formatOnSave": true,
+    "[python]": {
+        "editor.formatOnType": true
+    },
+    "emmet.includeLanguages": {
+        "ejs": "html",
+    },
+    "files.associations": {
+        "*.ejs": "html"
+    },
+    "[html]": {
+        "editor.defaultFormatter": "vscode.html-language-features"
+    },
+    "js-beautify.indent_size": 4,
 }
