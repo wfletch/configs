@@ -23,4 +23,5 @@
         "editor.defaultFormatter": "vscode.html-language-features"
     },
     "js-beautify.indent_size": 4,
+    "git.openRepositoryInParentFolders": "always",
 }
