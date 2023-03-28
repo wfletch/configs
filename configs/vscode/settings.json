@@ -24,4 +24,5 @@
     },
     "js-beautify.indent_size": 4,
     "git.openRepositoryInParentFolders": "always",
+    "redhat.telemetry.enabled": false,
 }
