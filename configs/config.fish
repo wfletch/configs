@@ -35,5 +35,6 @@ fish_vi_key_bindings
 # >>> conda initialize >>>
 # !! Contents within this block are managed by 'conda init' !!
 eval /opt/homebrew/anaconda3/bin/conda "shell.fish" "hook" $argv | source
+starship init fish | source
 # <<< conda initialize <<<
 
