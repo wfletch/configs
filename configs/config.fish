@@ -9,6 +9,9 @@ end
 
 # Add Homebrew to Path
 fish_add_path -p /opt/homebrew/bin
+
+# Add Hardware Simulator to path
+fish_add_path ~/Desktop/nand2tetris/tools
 # Go Code
 alias gmi="go mod init"
 
