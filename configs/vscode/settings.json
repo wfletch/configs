@@ -4,7 +4,9 @@
     "terminal.integrated.fontFamily": "'Hack Nerd Font'",
     "editor.minimap.enabled": false,
     "editor.autoClosingBrackets": "beforeWhitespace",
-    "editor.codeActionsOnSave": {"source.fixAll": true},
+    "editor.codeActionsOnSave": {
+        "source.fixAll": "explicit"
+    },
     "workbench.settings.editor": "json",
     "workbench.colorCustomizations": {
         "editorLineNumber.foreground": "#89e824",
