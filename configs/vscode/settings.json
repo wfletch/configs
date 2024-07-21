@@ -1,4 +1,7 @@
 {
     "telemetry.telemetryLevel": "off",
-    "workbench.iconTheme": "eq-material-theme-icons-deepforest"
+    "workbench.iconTheme": "eq-material-theme-icons-deepforest",
+    "[json]": {
+        "editor.defaultFormatter": "esbenp.prettier-vscode"
+    }
 }
