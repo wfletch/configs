@@ -46,5 +46,6 @@
             "value": "#84b1ee"
         }
     ],
-    "workbench.colorTheme": "Material Theme Ocean"
+    "workbench.colorTheme": "Material Theme Ocean",
+    "git.openRepositoryInParentFolders": "always"
 }
